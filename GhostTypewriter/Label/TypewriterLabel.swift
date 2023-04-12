@@ -173,8 +173,10 @@ public final class TypewriterLabel: UILabel {
                 self.stopTypewritingAnimation()
                 return
             }
+                                                                                                              
+                guard let ind = attributedText.string.startIndex else {return}                                                                                              
             
-            let characterIndex = attributedText.string.index(attributedText.string.startIndex, offsetBy: self.currentCharacterOffset)
+            let characterIndex = attributedText.string.index(ind, offsetBy: self.currentCharacterOffset)
             self.updateCharacterPresentation(atIndex: characterIndex)
             
             self.iterateToNextCharacterOffset()
