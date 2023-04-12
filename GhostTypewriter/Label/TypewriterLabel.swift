@@ -64,7 +64,7 @@ public enum AnimationStyle {
 public final class TypewriterLabel: UILabel {
     
     /// The interval (time gap) between each character being animated on screen.
-    public var typingTimeInterval: TimeInterval = 0.1
+    public var typingTimeInterval: TimeInterval = 0.001
     
     /// Boolean for if the label is animating or not.
     public private(set) var isAnimating: Bool = false
