@@ -64,7 +64,7 @@ public enum AnimationStyle {
 public final class TypewriterLabel: UILabel {
     
     /// The interval (time gap) between each character being animated on screen.
-    public var typingTimeInterval: TimeInterval = 0.001
+    public var typingTimeInterval: TimeInterval = 0.01
     
     /// Boolean for if the label is animating or not.
     public private(set) var isAnimating: Bool = false
@@ -174,7 +174,7 @@ public final class TypewriterLabel: UILabel {
                 return
             }
                                                                                                               
-                guard let ind = attributedText.string.startIndex else {return}                                                                                              
+               guard let ind = attributedText.string.startIndex else {return}                                                                                              
             
             let characterIndex = attributedText.string.index(ind, offsetBy: self.currentCharacterOffset)
             self.updateCharacterPresentation(atIndex: characterIndex)
