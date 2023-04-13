@@ -175,7 +175,8 @@ public final class TypewriterLabel: UILabel {
             }
                                                                                                                                                                                                        
             
-            let characterIndex = attributedText.string.index(attributedText.string.startIndex, offsetBy: self.currentCharacterOffset)
+
+let characterIndex = attributedText.string.index(attributedText.string.startIndex ?? String.Index(encodedOffset: 0), offsetBy: self.currentCharacterOffset)                                                                                                              
             self.updateCharacterPresentation(atIndex: characterIndex)
             
             self.iterateToNextCharacterOffset()
